@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.beyondata.co.kr.member.dao.MemberMapper">
+
+    <!-- 회원가입 쿼리 -->
+    <insert id="insertMember" parameterType="com.beyondata.co.kr.member.vo.MemberVO">
+        INSERT INTO user (email, username, password, hp, is_active, role, join_at, updated_at)
+        VALUES (#{email}, #{username}, #{password}, #{hp}, #{isActive, jdbcType=INTEGER}, #{role}, NOW(), NOW())
+    </insert>
+
+    <!-- 이메일로 회원 조회 -->
+    <select id="findMemberByEmail" resultType="com.beyondata.co.kr.member.vo.MemberVO">
+        SELECT *
+        FROM user
+        WHERE email = #{email}
+    </select>
+
+    <select id="findUserNameByEmail" resultType="com.beyondata.co.kr.member.vo.MemberVO">
+        SELECT username
+        FROM user
+        WHERE email = #{email}
+    </select>
+
+    <!-- 로그인 쿼리 (이메일과 비밀번호로 회원 조회) -->
+    <select id="loginMember" resultType="com.beyondata.co.kr.member.vo.MemberVO">
+        SELECT user_id    AS user_id,
+               email,
+               username,
+               password,
+               hp,
+               affiliation,
+               is_active  AS isActive,
+               role,
+               join_at    AS joinAt,
+               updated_at AS updatedAt
+        FROM user
+        WHERE email = #{email}
+          AND password = #{password}
+    </select>
+
+
+    <!-- 회원정보 수정 -->
+    <update id="updateMember" parameterType="String">
+        UPDATE user
+        SET
+        username = #{username},           <!-- 이름 수정 -->
+        hp = #{hp},                       <!-- 휴대전화 번호 수정 -->
+        role= #{role},                      <!-- 권한 수정 -->
+        updated_at = CURRENT_TIMESTAMP      <!-- 수정 일시 -->
+        WHERE email = #{email}                <!-- 이메일을 기준으로 수정 -->
+    </update>
+
+    <select id="checkPassword" resultType="boolean">
+        SELECT COUNT(*) > 0
+        FROM member
+        WHERE email = #{email}
+          AND password = #{password}
+    </select>
+
+    <!-- 이메일로 회원 존재 여부 확인 -->
+    <select id="findEmailExists" resultType="boolean">
+        SELECT EXISTS(SELECT 1 FROM user WHERE email = #{email}) AS emailExists
+    </select>
+
+
+</mapper>

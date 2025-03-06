@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-beyondataApplication<beyondata>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.beyondata.co.kr.beyondataApplication",
+            "projectName": "beyondata",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-beyondataApplication<beyond>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.beyondata.co.kr.beyondataApplication",
+            "projectName": "beyond",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
