@@ -62,8 +62,8 @@
                     </figure>
                     <div class="cardset-body">
                       <div class="cardset-tit row">
-                        <h5 class="h3 col-10">데이터 서비스</h5>
-                        <a href="/platform/data" class="col-2" style="text-align: right;">More</a>
+                        <h5 class="h3 col-10">데이터 서비스 사업부</h5>
+                        <a href="/dataservice/main" class="col-2" style="text-align: right;">More</a>
                       </div>
                       <h6 class="h6">오라클 소프트웨어 전 제품을 공급하며 특히, 데이터베이스를 설계하고 진단, 컨설팅을 통해 최적의 운영 방안을 제시해 드립니다.
                         </h2>
@@ -86,8 +86,8 @@
                     </figure>
                     <div class="cardset-body">
                       <div class="cardset-tit row">
-                        <h5 class="h3 col-10">플랫폼 서비스</h5>
-                        <a href="/platform/ai" class="col-2" style="text-align: right;">More</a>
+                        <h5 class="h3 col-10">플랫폼 서비스 사업부</h5>
+                        <a href="/platform/main" class="col-2" style="text-align: right;">More</a>
                       </div>
                       <h6 class="h6">클라우드 데이터센터 및 지능형 데이터센터의 설계, 구축 및 전산 시스템 이전을 담당합니다. 또한, 물리적 광케이블의 해킹 관제 및 모니터링 시스템을
                         통해 고객의 전산 자원을 보호합니다.
@@ -113,7 +113,7 @@
                     </figure>
                     <div class="cardset-body">
                       <div class="cardset-tit row">
-                        <h5 class="h3 col-10">컨텐츠 서비스 </h5>
+                        <h5 class="h3 col-10">미래전략 사업부 </h5>
                         <a href="/errorpage" class="col-2" style="text-align: right;">More</a>
                       </div>
                       <h6 class="h6">웹로그 분석 솔루션, APM, DPM 제품들을 설계 및 공급하여 고객에게
@@ -150,8 +150,6 @@
               </div>
             </div>
           </section>
-          <div class="th-layout-stickyright"></div>
-          <div class="th-layout-sideright"></div>
 
         </main>
         <%@ include file="./common/footer.jsp" %>
