@@ -1089,6 +1089,7 @@
     .basic-N58 .dropdown-btn {
         width: 90%;
         display: block;
+        height: 50px;
     }
 
     .basic-N58 .sidebar.open {
