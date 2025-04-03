@@ -63,7 +63,7 @@ public class BoardServiceImpl implements BoardService {
             MimeMessage message = mailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
-            helper.setFrom("admin@beyondata.co.kr"); // 발신자 이메일 명시적으로 설정
+            helper.setFrom("jh.woo@beyondata.co.kr"); // 발신자 이메일 명시적으로 설정
             helper.setTo(to);
             helper.setSubject(subject);
             helper.setText(content, true); // HTML 콘텐츠 허용

@@ -191,7 +191,7 @@ public class ContactBoardController {
 
         try {
             // 이메일 발송
-            boardService.sendEmail("admin@beyondata.co.kr", "고객 문의 - " + subject, mailContent);
+            boardService.sendEmail("jh.woo@beyondata.co.kr", "고객 문의 - " + subject, mailContent);
 
             model.addAttribute("success", "문의가 성공적으로 접수되었습니다. 이메일로 알림을 전송했습니다.");
         } catch (Exception e) {
