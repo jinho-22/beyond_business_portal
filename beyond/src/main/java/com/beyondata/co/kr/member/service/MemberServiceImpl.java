@@ -106,8 +106,8 @@ public class MemberServiceImpl implements MemberService {
         String content = "안녕하세요. 요청하신 임시 비밀번호는 다음과 같습니다.\n\n" + newPassword + "\n\n새 비밀번호로 로그인 해주세요.";
         message.setText(content);
 
-        // 발신자 주소 설정 (메일플러그)
-        message.setFrom(new InternetAddress("admin@beyondata.co.kr")); // 발신자 이메일 설정
+        // 발신자 주소 설정 (works)
+        message.setFrom(new InternetAddress("jh.woo@beyondata.co.kr")); // 발신자 이메일 설정
 
         // 수신자 설정
         message.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(email));

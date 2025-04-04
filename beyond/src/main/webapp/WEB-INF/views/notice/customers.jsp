@@ -72,13 +72,13 @@
                               <!-- 옵션 목록 -->
                               <ul class="selectset-list" id="dropdownList" style="display: none;">
                                 <li class="selectset-item">
-                                  <button class="selectset-link btn" type="button" data-value="불만">문의</button>
+                                  <button class="selectset-link btn" type="button" data-value="문의">문의</button>
                                 </li>
                                 <li class="selectset-item">
                                   <button class="selectset-link btn" type="button" data-value="라이센스">라이센스</button>
                                 </li>
                                 <li class="selectset-item">
-                                  <button class="selectset-link btn" type="button" data-value="문의">불만</button>
+                                  <button class="selectset-link btn" type="button" data-value="불만">불만</button>
                                 </li>
                                 <li class="selectset-item">
                                   <button class="selectset-link btn" type="button" data-value="기타">기타</button>
@@ -87,7 +87,7 @@
                             </div>
                           </div>
                           <!-- 숨겨진 input 필드 -->
-                          <input type="hidden" name="type" id="selectedType" value="불만">
+                          <input type="hidden" name="type" id="selectedType" value="문의">
                         </div>
                         <div class="form-box">
                           <div class="inputset inputset-line">
